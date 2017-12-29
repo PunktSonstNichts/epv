@@ -1,0 +1,136 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/warenkorb.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/framework.css">
+  <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" >
+  $(document).ready(function(){
+    $(document).on("focus", ".input_input", function () {
+        $(this).parent().addClass("focused").addClass("underline");
+    }).on("blur", ".input_input", function () {
+        $(this).parent().removeClass("underline");
+        if($(this).val().length == 0){
+            $(this).parent().removeClass("focused");
+        }
+    }).on("keydown", ".input_input", function () {
+        console.log("key pressed on input");
+        if($(this).val().length != 0){
+            $(this).parent().addClass("focused");
+        }
+    });
+
+    $(document).on("click", ".category_item", function () {
+      $(".category_item").removeClass("active");
+      $(this).addClass("active");
+    });
+  });
+  </script>
+
+  <title>ePV - Warenkorb</title>
+</head>
+<body>
+<div id="navbar">
+  <div class="wrapper" id="navbar_wrapper">
+  <div id="logo">e<i>PV</i></div>
+
+  <div id="navbar-heading">
+    <h3></h3>
+  </div>
+  <div id="navbar-items">
+    Warenkorb
+  </div>
+</div>
+</div>
+<div id="content_wrapper">
+<div id="category">
+  <div id="category-user">
+    <span id="category-user-avatar">T</span>
+    <span id="category-user-name">Till Meyer-Arlt</span>
+    <span id="category-user-logout">abmelden</span>
+  </div>
+  <div class="category_line"></div>
+  <div class="category_item"><span class="indicator"></span>Startseite</div>
+  <div class="category_item"><span class="indicator"></span>Prüfungsübersicht</div>
+  <div class="category_item"><span class="indicator"></span>Leistungsübersicht</div>
+  <div class="category_item"><span class="indicator"></span>Terminplaner</div>
+
+  <div id="category_bottom">
+	<div class="active">DE</div>
+	<div>EN</div>
+	<div>FR</div>
+  </div>
+</div>
+<div id="overview" class="wrapper">
+
+  <h1>Warenkorb</h1>
+
+<div id="breadcrumb_bar">
+  <div class="breadcrumb active">Warenkorb</div>
+  <span>&raquo;</span>
+  <div class="breadcrumb disabled">Autorisierung</div>
+  <span>&raquo;</span>
+  <div class="breadcrumb disabled">Bestätigung</div>
+  <span>&raquo;</span>
+  <div class="breadcrumb disabled">Abschluss</div>
+</div>
+
+<h2>Ihre zur Anmeldung ausgewählte Prüfungen</h2>
+<div class="res_wrapper">
+  <div class="search_res_card">
+  <div class="card_content">
+    <div class="card_title">Mensch-Computer Interaktion &raquo;</div>
+    <div class="card_subline"><div class="card_id">2345</div><div class="card_prof">J. Weimar</div></div>
+  </div>
+  <div class="card_color green"></div>
+  </div>
+
+
+  <div class="search_res_card">
+  <div class="card_content">
+    <div class="card_title">Mixed Reality &raquo;</div>
+    <div class="card_subline"><div class="card_id">57352</div><div class="card_prof">R. Gerndt</div></div>
+  </div>
+  <div class="card_color green"></div>
+  </div>
+
+  <div class="search_res_card">
+  <div class="card_content">
+    <div class="card_title">Mediendesign &raquo;</div>
+    <div class="card_subline"><div class="card_id">83346</div><div class="card_prof">C. Rieger</div></div>
+  </div>
+  <div class="card_color green"></div>
+  </div>
+
+  <div class="search_res_card">
+  <div class="card_content">
+    <div class="card_title">Audio-/Videodesign &raquo;</div>
+    <div class="card_subline"><div class="card_id">57352</div><div class="card_prof">G. Ding</div></div>
+  </div>
+  <div class="card_color green"></div>
+  </div>
+</div>
+
+<h2>Ihre zur Abmeldung ausgewählte Prüfungen</h2>
+<div class="res_wrapper">
+
+  <div class="search_res_card">
+  <div class="card_content">
+    <div class="card_title">Seminar &raquo;</div>
+    <div class="card_subline"><div class="card_id">57352</div><div class="card_prof">W. Pekrun</div></div>
+  </div>
+  <div class="card_color red"></div>
+  </div>
+</div>
+
+<div id="cart_interaction">
+  <button>Auswahl bestätigen &raquo;</button>
+</div>
+
+</div>
+</div>
+</body>

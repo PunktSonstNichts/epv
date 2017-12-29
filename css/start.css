@@ -1,0 +1,32 @@
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 40px;
+}
+#progressbar_wrapper{
+  flex: 1;
+  margin-left: 15px;
+  max-width: 400px;
+}
+#progressbar {
+  height: 30px;
+  border: 1px solid rgb(97, 97, 97);
+  border-radius: 2px;
+  overflow: hidden;
+  box-shadow: inset 0px 2px 10px rgba(16, 60, 93, 0.3);
+  display: flex;
+  margin-top: 18px;
+}
+#progress_good{
+  background: rgb(122,181,29);
+  height: 100%;
+}
+
+#progressbar_explain {
+    color: rgb(97, 97, 97);
+    text-align: right;
+    margin-top: 3px;
+    height: 18px;
+}

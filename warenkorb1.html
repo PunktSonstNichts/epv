@@ -1,0 +1,109 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/warenkorb.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/framework.css">
+  <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" >
+  $(document).ready(function(){
+    $(document).on("focus", ".input_input", function () {
+        $(this).parent().addClass("focused").addClass("underline");
+    }).on("blur", ".input_input", function () {
+        $(this).parent().removeClass("underline");
+        if($(this).val().length == 0){
+            $(this).parent().removeClass("focused");
+        }
+    }).on("keydown", ".input_input", function () {
+        console.log("key pressed on input");
+        if($(this).val().length != 0){
+            $(this).parent().addClass("focused");
+        }
+    });
+
+    $(document).on("click", ".category_item", function () {
+      $(".category_item").removeClass("active");
+      $(this).addClass("active");
+    });
+  });
+  </script>
+
+  <title>ePV - Warenkorb</title>
+</head>
+<body>
+<div id="navbar">
+  <div class="wrapper" id="navbar_wrapper">
+  <div id="logo">e<i>PV</i></div>
+
+  <div id="navbar-heading">
+    <h3></h3>
+  </div>
+  <div id="navbar-items">
+    Warenkorb
+  </div>
+</div>
+</div>
+<div id="content_wrapper">
+<div id="category">
+  <div id="category-user">
+    <span id="category-user-avatar">T</span>
+    <span id="category-user-name">Till Meyer-Arlt</span>
+    <span id="category-user-logout">abmelden</span>
+  </div>
+  <div class="category_line"></div>
+  <div class="category_item"><span class="indicator"></span>Startseite</div>
+  <div class="category_item"><span class="indicator"></span>Prüfungsübersicht</div>
+  <div class="category_item"><span class="indicator"></span>Leistungsübersicht</div>
+  <div class="category_item"><span class="indicator"></span>Terminplaner</div>
+
+  <div id="category_bottom">
+	<div class="active">DE</div>
+	<div>EN</div>
+	<div>FR</div>
+  </div>
+</div>
+<div id="overview" class="wrapper">
+
+  <h1>Warenkorb</h1>
+
+<div id="breadcrumb_bar">
+  <div class="breadcrumb" data-link="warenkorb.html">Warenkorb</div>
+  <span>&raquo;</span>
+  <div class="breadcrumb active">Autorisierung</div>
+  <span>&raquo;</span>
+  <div class="breadcrumb disabled">Bestätigung</div>
+  <span>&raquo;</span>
+  <div class="breadcrumb disabled">Abschluss</div>
+</div>
+
+<div id="auth_choice">
+<div><input type="radio" id="auth_choice_tan" name="auth_choice" value="tan"> <label for="auth_choice_tan">TAN Liste</label></div>
+
+<div><input type="radio" id="auth_choice_mtan" name="auth_choice" value="mtan" checked> <label for="auth_choice_mtan">mTAN per SMS</label></div>
+</div>
+
+<div class="auth">
+<span>Wir haben Ihnen eine mTan an <span class="phonenumber">0175 ****342</span> geschickt. Sollten Sie keine SMS erhalten haben, können Sie eine neue anfordern.</span>
+<button id="new_mTAN">Neue mTAN versenden</button>
+<div class="auth_input">
+  <span>Erhaltene mTAN bitte hier eingeben: </span>
+  <div class="input_field white" style="flex: 1;">
+    <input class="input_input" type="text" id="mTAN" name="mTAN">
+    <label class="input_label" for="mTAN">mTAN</label>
+    <span class="input_focusline"></span>
+  </div>
+</div>
+</div>
+<div id="cart_interaction">
+  <button>Bestätigen &raquo;</button>
+  <div id="cart_interaction_info">
+    <a>Ihre TAN-Einstellungen</a>
+  </div>
+</div>
+
+</div>
+</div>
+</body>
