@@ -35,6 +35,9 @@ $(document).ready(function(){
 
   //fake links
   $(document).on("click", "*[data-href]", function(e){
-    window.location.href = $(this).attr("data-href");
+    var link = $(this).attr("data-href");
+    setTimeout(function(){
+      window.location.href = link;
+    }, 400);
   });
 });

@@ -8,28 +8,7 @@
   <link rel="stylesheet" type="text/css" href="css/main.css">
   <link rel="stylesheet" type="text/css" href="css/framework.css">
   <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
-  <script type="text/javascript" >
-  $(document).ready(function(){
-    $(document).on("focus", ".input_input", function () {
-        $(this).parent().addClass("focused").addClass("underline");
-    }).on("blur", ".input_input", function () {
-        $(this).parent().removeClass("underline");
-        if($(this).val().length == 0){
-            $(this).parent().removeClass("focused");
-        }
-    }).on("keydown", ".input_input", function () {
-        console.log("key pressed on input");
-        if($(this).val().length != 0){
-            $(this).parent().addClass("focused");
-        }
-    });
-
-    $(document).on("click", ".category_item", function () {
-      $(".category_item").removeClass("active");
-      $(this).addClass("active");
-    });
-  });
-  </script>
+  <script type="text/javascript" src="js/main.js"></script>
 
   <title>ePV - Warenkorb</title>
 </head>
@@ -54,9 +33,9 @@
     <span id="category-user-logout">abmelden</span>
   </div>
   <div class="category_line"></div>
-  <div class="category_item"><span class="indicator"></span>Startseite</div>
-  <div class="category_item"><span class="indicator"></span>Prüfungsübersicht</div>
-  <div class="category_item"><span class="indicator"></span>Leistungsübersicht</div>
+  <div class="category_item" data-href="start.html"><span class="indicator"></span>Startseite</div>
+  <div class="category_item" data-href="pruefungsuebersicht.html"><span class="indicator"></span>Prüfungsübersicht</div>
+  <div class="category_item" data-href="leistungsuebersicht.html"><span class="indicator"></span>Leistungsübersicht</div>
   <div class="category_item"><span class="indicator"></span>Terminplaner</div>
 
   <div id="category_bottom">
@@ -70,7 +49,7 @@
   <h1>Warenkorb</h1>
 
 <div id="breadcrumb_bar">
-  <div class="breadcrumb" data-link="warenkorb.html">Warenkorb</div>
+  <div class="breadcrumb" data-href="warenkorb.html">Warenkorb</div>
   <span>&raquo;</span>
   <div class="breadcrumb active">Autorisierung</div>
   <span>&raquo;</span>
@@ -98,7 +77,7 @@
 </div>
 </div>
 <div id="cart_interaction">
-  <button>Bestätigen &raquo;</button>
+  <button data-href="warenkorb2.html">Bestätigen &raquo;</button>
   <div id="cart_interaction_info">
     <a>Ihre TAN-Einstellungen</a>
   </div>

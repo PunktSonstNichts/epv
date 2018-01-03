@@ -1,0 +1,79 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="css/kurs.css">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+  <link rel="stylesheet" type="text/css" href="css/framework.css">
+  <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $(document).on("click", "#course_btn", function(){
+      $(this).remove();
+      $("#course_status").removeClass("approved").addClass("pending").children("span").html("Änderungen bitte über Warenkorb bestätigen");
+      $("#course_counter").html(parseInt($("#course_counter").html()) + 1);
+    });
+  });
+  </script>
+  <title>ePV - Kursdetails</title>
+</head>
+<body>
+  <div id="navbar">
+    <div class="wrapper" id="navbar_wrapper">
+      <div id="logo">e<i>PV</i></div>
+
+      <div id="navbar-heading">
+        <h3></h3>
+      </div>
+      <div id="navbar-items" data-href="warenkorb.html">
+        Warenkorb <span id="course_counter">5</span>
+      </div>
+    </div>
+  </div>
+<div id="content_wrapper">
+  <div id="category">
+    <div id="category-user">
+      <span id="category-user-avatar">T</span>
+      <span id="category-user-name">Till Meyer-Arlt</span>
+      <span class="category-user-semesterinfo">Studium Informatik</span>
+      <span class="category-user-semesterinfo">4. Fachsemester</span>
+      <span id="category-user-logout">abmelden</span>
+    </div>
+    <div class="category_line"></div>
+    <div class="category_item" data-href="start.html"><span class="indicator"></span>Startseite</div>
+    <div class="category_item" data-href="pruefungsuebersicht.html"><span class="indicator"></span>Prüfungsübersicht</div>
+    <div class="category_item" data-href="leistungsuebersicht.html"><span class="indicator"></span>Leistungsübersicht</div>
+    <div class="category_item"><span class="indicator"></span>Terminplaner</div>
+
+    <div id="category_bottom">
+  	<div class="active">DE</div>
+  	<div>EN</div>
+  	<div>FR</div>
+    </div>
+  </div>
+<div id="overview" class="wrapper">
+  <div id="course_header">
+    <div id="course_interaction">
+      <div>
+        <div id="course_title">Mensch-Computer Interaktion</div>
+        <div id="course_lecturer">Prof. J. Weimar</div>
+      </div>
+      <button id="course_btn">Abmelden</button>
+    </div>
+  </div>
+  <div id="course_status" class="approved">
+    <span>Sie sind für diesen Kurs im WS17/18 angemeldet.</span>
+  </div>
+  <div id="course_information">
+    <div class="course_heading">Beschreibung</div>
+    <div>Was für 1 toller Kurs!</div>
+
+    <div class="course_heading">Credits</div>
+    <div>5 ECTS</div>
+  </div>
+</div>
+</div>
+</body>
