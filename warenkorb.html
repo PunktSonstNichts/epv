@@ -9,13 +9,20 @@
   <link rel="stylesheet" type="text/css" href="css/framework.css">
   <script type="text/javascript" src="jquery-3.1.1.min.js"></script>
   <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $(document).on("click", ".btn_discard", function(){
+      $(this).parents(".search_res_card").remove();
+    });
+  });
+  </script>
 
   <title>ePV - Warenkorb</title>
 </head>
 <body>
 <div id="navbar">
   <div class="wrapper" id="navbar_wrapper">
-  <div id="logo">e<i>PV</i></div>
+  <div id="logo" data-href="start.html">e<i>PV</i></div>
 
   <div id="navbar-heading">
     <h3></h3>
@@ -66,7 +73,7 @@
       <div class="card_title">Mensch-Computer Interaktion &raquo;</div>
       <div class="card_subline"><div class="card_id">2345</div><div class="card_prof">J. Weimar</div></div>
     </div>
-    <button>Verwerfen</button>
+    <button class="btn_discard">Verwerfen</button>
   </div>
   <div class="card_color green"></div>
   </div>
@@ -78,6 +85,7 @@
       <div class="card_title">Mixed Reality &raquo;</div>
       <div class="card_subline"><div class="card_id">57352</div><div class="card_prof">R. Gerndt</div></div>
     </div>
+    <button class="btn_discard">Verwerfen</button>
   </div>
   <div class="card_color green"></div>
   </div>
@@ -88,6 +96,7 @@
       <div class="card_title">Mediendesign &raquo;</div>
       <div class="card_subline"><div class="card_id">83346</div><div class="card_prof">C. Rieger</div></div>
     </div>
+    <button class="btn_discard">Verwerfen</button>
   </div>
   <div class="card_color green"></div>
   </div>
@@ -98,6 +107,7 @@
       <div class="card_title">Audio-/Videodesign &raquo;</div>
       <div class="card_subline"><div class="card_id">57352</div><div class="card_prof">G. Ding</div></div>
     </div>
+    <button class="btn_discard">Verwerfen</button>
   </div>
   <div class="card_color green"></div>
   </div>
@@ -112,6 +122,7 @@
       <div class="card_title">Seminar &raquo;</div>
       <div class="card_subline"><div class="card_id">57352</div><div class="card_prof">W. Pekrun</div></div>
     </div>
+    <button class="btn_discard">Verwerfen</button>
   </div>
   <div class="card_color red"></div>
   </div>
