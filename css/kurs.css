@@ -34,6 +34,13 @@
 
 #course_btn {
     background: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#course_btn:hover {
+    color: #000;
+    background: #fff;
+    transition: background-color 0.2s ease-in-out;
 }
 
 #course_status {

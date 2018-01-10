@@ -30,6 +30,10 @@ navbar
     height: 60px;
 }
 
+#navbar-user {
+    padding-top: 0.9rem;
+}
+
 @media (min-width: 849px) {
     #navbar_wrapper {
         padding-left: 182px;
@@ -53,10 +57,19 @@ navbar
 }
 
 #navbar-items {
+    padding: 0 10px;
     display: flex;
     align-items: center;
     position: relative;
     color: white;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+}
+
+#navbar-items.active,
+#navbar-items:hover {
+    transition: background-color 0.2s ease-in-out;
+    background: rgba(255, 255, 255, 0.1);
 }
 
 #course_counter {
@@ -68,7 +81,7 @@ navbar
     justify-content: center;
     align-items: center;
     border-radius: 100%;
-    margin: 5px;
+    margin: 5px 0 5px 5px;
     box-shadow: 0 0 5px rgb(0, 0, 0);
 }
 
@@ -197,4 +210,8 @@ button {
 
 h2, h3 {
     margin-top: 45px;
+}
+
+.hidden {
+    display: none;
 }

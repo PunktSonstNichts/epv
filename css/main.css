@@ -101,7 +101,9 @@
     transition: all 0.25s cubic-bezier(0.66, 0.13, 0.4, 0.99);
 }
 
+.category_item:hover,
 .category_item.active {
+    transition: all 0.25s cubic-bezier(0.66, 0.13, 0.4, 0.99);
     color: rgb(33, 33, 33);
 }
 
@@ -138,9 +140,12 @@
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.66, 0.13, 0.4, 0.99);
 }
 
+#category_bottom > div:hover,
 #category_bottom > div.active {
+    transition: all 0.25s cubic-bezier(0.66, 0.13, 0.4, 0.99);
     background-color: rgb(0, 58, 121);
     color: white;
 }
@@ -154,7 +159,7 @@
 .res_wrapper {
     /* border: 1px solid rgba(160, 160, 160, 0.6); */
     border-radius: 4px;
-    padding: 0 10px;
+    /*padding: 0 10px;*/
     /* box-shadow: 1px 2px 6px rgba(0, 0, 0, 0.17); */
     /* background: rgb(0, 58, 121); */
     margin-top: 10px;
@@ -202,16 +207,16 @@
 
 button.card_btn.leave_course {
     background: none;
-    color: rgb(0, 58, 121);
+    color: rgb(226, 0, 26);
+    border: 1px solid rgb(226, 0, 26);
+    transition: all 0.2s ease-in-out;
 }
 
-button.card_btn {
-    border-color: rgb(0, 58, 121);
-    outline: none;
-}
-
-button.card_btn.enter_course:hover, button.card_btn.leave_course:hover {
-    box-shadow: 0 0 5px rgba(0, 58, 121, 0.8);
+button.card_btn.leave_course:hover {
+    background: rgb(226, 0, 26);
+    color: #fff;
+    border: 1px solid rgb(226, 0, 26);
+    transition: all 0.2s ease-in-out;
 }
 
 button.card_btn.course_entered {
@@ -241,4 +246,17 @@ button.card_btn.course_left {
 .red.card_color {
     background: rgb(226, 0, 26);
     box-shadow: 0 0 3px rgb(226, 0, 26);
+}
+
+.card_btn,
+.btn_discard {
+    transition: all 0.2s ease-in-out;
+}
+
+.card_btn:hover,
+.btn_discard:hover {
+    transition: all 0.2s ease-in-out;
+    border: 1px solid rgb(0, 58, 121);
+    background: transparent;
+    color:  rgb(0, 58, 121);
 }
