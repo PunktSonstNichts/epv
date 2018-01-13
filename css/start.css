@@ -10,6 +10,7 @@
     flex: 1;
     margin-left: 15px;
     max-width: 400px;
+    cursor: pointer;
 }
 
 #progressbar {
