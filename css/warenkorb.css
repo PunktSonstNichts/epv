@@ -11,15 +11,29 @@
     padding: 8px 4px;
     border: 1px solid rgb(202, 202, 202);
     border-radius: 6px;
-    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.17);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.17);
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
 }
+
 .breadcrumb.active {
-    background: rgb(122,181,29);
+    background: rgb(122, 181, 29);
     color: white;
     font-weight: bold;
 }
+
+.breadcrumb:hover {
+    background: rgb(91, 146, 29);
+    transition: background-color 0.2s ease-in-out;
+}
+
+.breadcrumb.disabled:hover {
+    background: inherit;
+}
+
 .breadcrumb.disabled {
-    color: rgb(120,120,120);
+    color: rgb(120, 120, 120);
+    cursor: no-drop;
 }
 
 #cart_interaction {
@@ -27,25 +41,41 @@
     display: flex;
     align-items: center;
 }
-#cart_interaction > button{
-  font-size: 1.4em;
-  background: rgb(122,181,29);
-  color: white;
-  font-weight: bold;
-}
-#cart_interaction > #cart_interaction_info{
-  margin-left: 5px;
+
+#cart_interaction > button {
+    font-size: 1.4em;
+    background: rgb(122, 181, 29);
+    color: white;
+    font-weight: bold;
+    transition: background-color 0.2s ease-in-out;
 }
 
+#cart_interaction > button:hover {
+    background: rgb(91, 146, 29);
+    transition: background-color 0.2s ease-in-out;
+}
 
+#cart_interaction > #cart_interaction_info {
+    margin-left: 5px;
+}
 
 /* warenkorb1 */
 #auth_choice {
     margin-top: 50px;
 }
+
 #new_mTAN {
     margin-top: 5px;
+    transition: all 0.2s ease-in-out;
 }
+
+#new_mTAN:hover {
+    transition: all 0.2s ease-in-out;
+    border: 1px solid rgb(0, 58, 121);
+    background: transparent;
+    color:  rgb(0, 58, 121);
+}
+
 .auth {
     display: flex;
     flex-direction: column;
@@ -55,17 +85,19 @@
     border-top: 1px solid;
     text-align: center;
 }
+
 .auth_input {
-  background: rgb(0, 58, 121);
-  color: white;
-  width: 100%;
-  box-sizing: border-box;
-  padding: 15px;
-  margin-top: 25px;
-  margin-bottom: 30px;
-  display: flex;
-  align-items: center;
+    background: rgb(0, 58, 121);
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 15px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
 }
-.auth_input > span{
-  margin-right: 7px;
+
+.auth_input > span {
+    margin-right: 7px;
 }

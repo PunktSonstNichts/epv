@@ -8,10 +8,20 @@ $(document).ready(function(){
       if($(this).val().length == 0){
           $(this).parent().removeClass("focused");
       }
-  }).on("keydown", ".input_input", function () {
+  }).on("keydown", ".input_input", function (e) {
       console.log("key pressed on input");
-      if($(this).val().length != 0){
+      $('.search_res_card').each(function () {
+          var card_title_text = $('.card_title', this).text();
+          if (card_title_text.toLowerCase().indexOf(e.target.value.toLowerCase()) !== -1) {
+              $(this).removeClass('hidden');
+          } else {
+              $(this).addClass('hidden');
+          }
+      });
+      if($(this).val().length !== 0){
           $(this).parent().addClass("focused");
+      } else {
+          $('.search_res_card').removeClass('hidden');
       }
   });
 
