@@ -1,0 +1,37 @@
+#logout {
+    background: rgb(226,0,26);
+    margin: 2vmin;
+    margin-top: 117px;
+    padding: 5px;
+    border-radius: 4px;
+}
+#logout-header {
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    margin: 5px 0;
+    text-shadow: 1px 1px 0px rgb(121, 0, 0);
+}
+#logout-text {
+    background: white;
+    padding: 15px;
+    padding-top: 20px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+#logout_interaction {
+    background: white;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+}
+#back-btn {
+    background: none;
+    color: rgb(51, 52, 55);
+    border: 1px solid;
+}
+#logout-btn {
+    background: none;
+    color: rgb(226,0,26);
+    border: 1px solid;
+}
